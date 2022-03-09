@@ -6,4 +6,4 @@ class Order():
             self.quantity = quantity
             self.book_title = book_title
             self.book_price = book_price
-            self.total_price = book_price * quantity
+            self.total_price = round(book_price * quantity, 2)

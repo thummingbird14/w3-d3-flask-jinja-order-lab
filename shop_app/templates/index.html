@@ -7,9 +7,10 @@
         {% for order in orders %}
         <div>
             <p>
-                {{ order.customer_name}} : {{ order.order_date }} : {{order.book_name}} : {{order.quantity}} : {{order.book_price}} : {{order.total_price}}
+                <a href = '/orders/<count>' >{{ order.customer_name}}</a> : {{ order.order_date }} : {{order.book_title}} : {{order.quantity}} : £{{order.book_price}} : £{{order.total_price}}
             </p>
         </div>
+        {%count+=1%}
         {% endfor %}
     </body>
 </html>
