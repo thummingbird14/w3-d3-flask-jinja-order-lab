@@ -1,6 +1,7 @@
 class Order():
 
-    def __init__(self, customer_name, order_date, quantity, book_title, book_price):
+    def __init__(self, customer_id, customer_name, order_date, quantity, book_title, book_price):
+            self.customer_id = customer_id
             self.customer_name = customer_name
             self.order_date = order_date
             self.quantity = quantity
