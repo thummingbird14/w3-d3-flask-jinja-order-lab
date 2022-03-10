@@ -1,13 +1,13 @@
 <html>
     <head>
-        <title>Bruce's Books</title>
+        <title>Bruce Books</title>
     </head>
     <body>
         <h1>Orders</h1>
-        {% for order in orders %}
+        {% for i in range (orders|length) %}
         <div>
             <p>
-                <a href = '/orders/{{order.customer_id}}'>{{ order.customer_name}}</a> : {{ order.order_date }} : {{order.book_title}} : {{order.quantity}} : £{{order.book_price}} : £{{order.total_price}}
+                <a href = '/orders/{{i}}'>{{ orders[i].customer_name}}</a> : {{ orders[i].order_date }} : {{orders[i].book_title}} : {{orders[i].quantity}} : £{{orders[i].book_price}} : £{{orders[i].total_price}}
             </p>
         </div>
         {% endfor %}
